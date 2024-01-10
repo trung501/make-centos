@@ -5,7 +5,8 @@
 # Copyright (c) 2015-2021, Fabian Affolter <fabian@affolter-engineering.ch>
 # Released under the MIT license. See LICENSE file for details.
 #
-RELEASE=7.0-2009
+#http://mirror.viettelcloud.vn/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
+RELEASE=7.9.2009
 TYPE=Minimal
 CURRENT_TIME=`date +%F`
 CUSTOM_RPMS=rpms
@@ -15,7 +16,7 @@ MENU_TITLE='Plain CentOS'
 ISO=CentOS-${RELEASE:0:1}-x86_64-$TYPE-${RELEASE:4:6}.iso
 ISO_DIR=iso
 ISO_FILENAME=Plain-CentOS-$RELEASE-x86_64-$TYPE-$CURRENT_TIME.iso
-MIRROR=ftp://ftp.halifax.rwth-aachen.de/centos/$RELEASE/isos/x86_64
+MIRROR=http://mirror.viettelcloud.vn/centos/$RELEASE/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
 MOUNT_POINT=centos-${RELEASE:0:1}
 
 function fetch_iso() {
@@ -28,7 +29,7 @@ function fetch_iso() {
     fi
     if [ ! -e $ISO_DIR/$ISO ]; then
         echo "No local copy of $ISO. Fetching latest $ISO ..."
-        curl -o $ISO_DIR/$ISO $MIRROR/$ISO
+        curl -o $ISO_DIR/$ISO $MIRROR
     fi
     check_iso
 }
