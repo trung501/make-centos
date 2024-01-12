@@ -1,7 +1,7 @@
-# make-centos
-My centos iso create scripts
+make_centos
+===========
 
-``make-centos`` allows one to create a customized CentOS 7 ISO image with
+``make_centos`` allows one to create a customized CentOS 7 ISO image with
 additional packages if wished and Kickstart files to automate the installation
 process.
 
@@ -64,7 +64,6 @@ Credits
 
 This project was inspired by the work of:
 
-* https://github.com/fabaff/make_centos
 * https://github.com/joyent/mi-centos-7
 * https://ask.fedoraproject.org/en/question/46020/build-a-bootable-dvd-that-uses-kickstart/
 * http://www.redhat.com/archives/kickstart-list/2014-August/msg00010.html
@@ -72,5 +71,5 @@ This project was inspired by the work of:
 License
 -------
 
-``make-centos`` licensed under MIT, for more details check LICENSE.
+``make_centos`` licensed under MIT, for more details check LICENSE.
 
